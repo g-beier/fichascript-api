@@ -19,6 +19,7 @@ interface IFeatRequirements {
   level?: number;
   feats?: ObjectId[];
   race?: ObjectId;
+  origin?: ObjectId;
 }
 
 export interface IFeatModel extends IFeat, Document {}

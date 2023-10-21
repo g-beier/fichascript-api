@@ -3,6 +3,7 @@ import http from "http";
 import mongoose from "mongoose";
 import { config } from "./config";
 import featRoutes from "./api/feats";
+import originRoutes from "./api/origins";
 
 const router = express();
 
@@ -53,6 +54,7 @@ const StartServer = (): void => {
   // routes
 
   router.use("/api/feats", featRoutes);
+  router.use("/api/origins", originRoutes);
 
   // ping - healthcheck
   router.get("/ping", (req, res, next) =>

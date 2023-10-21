@@ -16,7 +16,7 @@ const createFeat = async (req: Request, res: Response, next: NextFunction) => {
 
   return await feat
     .save()
-    .then((feat) => res.status(201).json({ feat }))
+    .then((feat) => res.status(201).json(feat))
     .catch((err) => res.status(500).json({ err }));
 };
 
